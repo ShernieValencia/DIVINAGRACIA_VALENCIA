@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark & Savour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#C00645',
+                        'primary-light': '#EAA8AC',
+                        'accent-gold': '#FFD700',
+                        'background-light': '#E7CDCE',
+                        'text-dark': '#D05D65',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-color: #c00645;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='100' height='100' fill='%23880E4F'/%3E%3Cpath d='M25 50c0-13.8 11.2-25 25-25s25 11.2 25 25-11.2 25-25 25-25-11.2-25-25zm50 0c0-13.8-11.2-25-25-25s-25 11.2-25 25 11.2 25 25 25 25-11.2 25-25z' fill-opacity='0.1' fill='%23ffffff'/%3E%3C/svg%3E");
+            background-size: 80px 80px;
+        }
+        .image-overlay {
+            background: linear-gradient(180deg, rgba(168, 133, 152, 0.7) 0%, rgba(244, 143, 177, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light font-sans text-text-dark antialiased">
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-serif text-primary-dark font-bold tracking-wider">
+                        Spark & Savour
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#features" class="text-text-dark hover:text-primary-dark transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                    <a href="#ideas" class="text-text-dark hover:text-primary-dark transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Date Ideas</a>
+                    <a href="#process" class="text-text-dark hover:text-primary-dark transition duration-300 px-3 py-2 rounded-md text-sm font-medium">How It Works</a>
+                    <a href="#contact" class="bg-primary-dark text-white hover:bg-primary-dark/90 transition duration-300 px-4 py-2 rounded-full text-sm font-medium shadow-md">Start Planning</a>
+                </div>
+                <div class="sm:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-primary-dark hover:text-white hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-dark" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#features" class="text-text-dark hover:bg-primary-light/30 block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                <a href="#ideas" class="text-text-dark hover:bg-primary-light/30 block px-3 py-2 rounded-md text-base font-medium">Date Ideas</a>
+                <a href="#process" class="text-text-dark hover:bg-primary-light/30 block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+                <a href="#contact" class="block w-full text-center bg-primary-light text-primary-dark hover:bg-primary-dark/80 hover:text-white transition duration-300 px-3 py-2 rounded-md text-base font-medium mt-2">Start Planning</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative w-full h-auto min-h-[70vh] flex items-center justify-center pt-16 hero-bg overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://placehold.co/1200x800/880E4F/FFFFFF?text=A+Romantic+Evening+Out" 
+                alt="Couple enjoying a romantic planned date" 
+                class="w-full h-full object-cover opacity-70"
+                onerror="this.onerror=null; this.src='https://placehold.co/1200x800/880E4F/FFFFFF?text=Romantic+Date+Placeholder';">
+            <div class="absolute inset-0 image-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-4xl px-4 py-16 sm:py-24">
+            <h1 class="text-5xl sm:text-7xl font-serif font-extrabold text-white leading-tight mb-4 tracking-tight shadow-md">
+                Stop Planning. Start Connecting.
+            </h1>
+            <p class="text-xl sm:text-2xl text-background-light mb-8 font-light italic">
+                Planning a great date is stressful; enjoying one shouldn't be.
+            </p>
+            <a href="#contact" class="inline-block bg-accent-gold text-primary-dark font-bold text-lg px-10 py-4 rounded-full shadow-2xl hover:bg-accent-gold/90 transform hover:scale-105 transition duration-300 uppercase tracking-widest">
+                Curate My Perfect Date Now
+            </a>
+            <p class="mt-4 text-sm text-white/80">Planning starts at just $49</p>
+        </div>
+    </header>
+
+    <section id="features" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold text-primary-dark mb-4">Why Choose Spark & Savour?</h2>
+                <p class="text-lg text-text-dark/70 max-w-3xl mx-auto">We handle every detail, transforming an ordinary night into an extraordinary memory.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center p-8 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-primary-light mb-4">
+                        <span role="img" aria-label="Heart with pencil">✍️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-3">Personalized Matching</h3>
+                    <p class="text-text-dark/80">Tell us your partner's interests and your budget. We match you with curated experiences you'll both adore.</p>
+                </div>
+
+                <div class="text-center p-8 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-primary-light mb-4">
+                        <span role="img" aria-label="Calendar with checkmark">🗓️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-3">Seamless Booking</h3>
+                    <p class="text-text-dark/80">From reservations to transportation, we book and confirm everything. You just show up and enjoy.</p>
+                </div>
+
+                <div class="text-center p-8 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-primary-light mb-4">
+                        <span role="img" aria-label="Gift box">🎁</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-3">Surprise & Delight</h3>
+                    <p class="text-text-dark/80">We suggest optional, unique touches like custom gifts or private notes to elevate the romance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ideas" class="py-16 sm:py-24 bg-primary-dark/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold text-primary-dark mb-4">Our Curated Date Ideas</h2>
+                <p class="text-lg text-text-dark/70 max-w-3xl mx-auto">A glimpse into the diverse experiences we can create.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/F48FB1/880E4F?text=Private+Rooftop+Dinner" alt="Private rooftop dinner setting">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-primary-dark mb-2">"Progressive Dinner" Night</h4>
+                        <p class="text-text-dark/90 text-sm">Instead of eating at one restaurant, have each course (appetizers, main, dessert) at a different location. This keeps the evening moving, creates anticipation, and allows you to try multiple venues.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/880E4F/FFFFFF?text=Couples+Cooking+Class" alt="Couple making pasta">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-primary-dark mb-2">Stargazing with Hot Drinks</h4>
+                        <p class="text-text-dark/90 text-sm">Drive to a spot away from city lights (a park or hilltop). Bring a blanket, a thermos of hot cocoa/cider/tea, and perhaps a star chart app. It's a peaceful, intimate date focused on quiet appreciation.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/FFF0F5/880E4F?text=Stargazing+Retreat" alt="Stargazing through a telescope">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-primary-dark mb-2">Recreate Your First Date</h4>
+                        <p class="text-text-dark/90 text-sm">A nostalgic and sweet tribute to your relationship's beginning. Go back to the original spot, order the same thing, and reminisce about how you both felt that first time. It's a wonderful way to reconnect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-primary-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <blockquote class="text-white italic text-2xl font-serif mb-6 leading-relaxed">
+                "It was the most thoughtful, stress free date we've ever had. Every detail was perfect and it felt completely unique to us. Thank you for bringing the magic back!"
+            </blockquote>
+            <cite class="text-accent-gold text-lg font-semibold block mb-8">— Grace Divinagracia, Happy Client</cite>
+            
+            <a href="#contact" class="inline-block bg-white text-primary-dark font-bold text-xl px-12 py-5 rounded-full shadow-2xl hover:bg-background-light transform hover:scale-105 transition duration-300 uppercase tracking-widest">
+                Ready to Start Your Story?
+            </a>
+        </div>
+    </section>
+    
+    <footer class="bg-text-dark text-background-light py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl font-serif text-accent-gold mb-3">Spark & Savour</p>
+            <p class="text-sm">&copy; 2025 Romantic Date Planners. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-background-light/80 hover:text-accent-gold transition duration-300 text-sm">Privacy Policy</a>
+                <span class="text-background-light/50">|</span>
+                <a href="#" class="text-background-light/80 hover:text-accent-gold transition duration-300 text-sm">Terms of Service</a>
+            </div>
+            <p id="contact" class="mt-4 text-xs text-background-light/60">Contact us at <a href="Spark & Savour:hello@Spark&Savour.com" class="underline hover:text-accent-gold">hello@Spark&Savour.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+                menuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
